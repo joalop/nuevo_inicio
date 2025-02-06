@@ -1,0 +1,104 @@
+:root{
+    --rellenoPaddingCells: 5px 5px 5px 5px;
+    --rellenoPaddingImage: 1px 1px 1px 1px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    overflow-y: auto;
+}
+
+#main{
+    padding: var(--rellenoPaddingCells);
+    width: 80%;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.icons{
+    width: 1em;
+    
+    border-radius: 20px;
+}
+
+.third_numbers{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    width: 100%;
+    padding: var(--rellenoPaddingImage);
+
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.cell{
+    margin: 0.09em;
+    padding: var(--rellenoPaddingCells);
+    width: 1.5em;
+
+    border: 1px solid;
+    border-radius: 10px;
+
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+
+    transition: 0.7s;
+}
+.cell:hover{
+    background: #00a2ff;
+    opacity: 0.1;
+}
+
+footer{
+    position: fixed;
+    padding: 5px 10px 5px 10px;
+
+
+    text-align: center;
+
+    margin-bottom: 2em;
+
+    width: 100%;
+
+
+    bottom: 0;
+
+    background: #383737;
+}
+footer input{
+    border: 1px solid;
+    padding: 5px 10px 5px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.bad,.warm, .check{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.bad{
+    color: lightcoral;
+}
+
+.warm{
+    color: lightyellow;
+}
+
+.check{
+    color: lightgreen;
+}
