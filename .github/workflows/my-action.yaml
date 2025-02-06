@@ -10,8 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Cloning a repository
-        uses: joalop/nuevo_inicio
+        uses: actions/checkout@v4  # Oficial Gihub Action to repo cloned in VM
 
       - name: View a file list of repository
-        run: ls -la
-
+        run: ls -la  # ✅ Listar archivos después de clonar
