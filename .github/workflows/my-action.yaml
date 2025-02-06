@@ -13,4 +13,4 @@ jobs:
         uses: actions/checkout@v4  # Oficial Gihub Action to repo cloned in VM
 
       - name: View a file list of repository
-        run: ls -la  # ✅ Listar archivos después de clonar
+        run: ls -la
