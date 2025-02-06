@@ -1,0 +1,17 @@
+name: My First GitHub Action 🚀
+
+on: 
+  push:
+    branches:
+      - main  # this action is executed when I push on 'main' branch
+
+jobs:
+  listar-repo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cloning a repository
+        uses: joalop/nuevo_inicio
+
+      - name: View a file list of repository
+        run: ls -la
+
