@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <title>Calculadora</title>
+    <style>
+
+        :root{
+            --rellenoPaddingCells: 5px 5px 5px 5px;
+            --rellenoPaddingImage: 1px 1px 1px 1px;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+            overflow-y: auto;
+        }
+
+        #main{
+            padding: var(--rellenoPaddingCells);
+            width: 80%;
+            border: 1px solid;
+            border-radius: 10px;
+        }
+
+        .icons{
+            width: 1em;
+            
+            border-radius: 20px;
+        }
+
+        .third_numbers{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            width: 100%;
+            padding: var(--rellenoPaddingImage);
+
+            border: 1px solid;
+            border-radius: 10px;
+        }
+
+        .cell{
+            margin: 0.09em;
+            padding: var(--rellenoPaddingCells);
+            width: 1.5em;
+
+            border: 1px solid;
+            border-radius: 10px;
+
+            text-align: center;
+            font-weight: bold;
+            font-size: 32px;
+
+            transition: 0.7s;
+        }
+        .cell:hover{
+            background: #00a2ff;
+            opacity: 0.1;
+        }
+
+    </style>
+</head>
+<body>
+
+    <main id="main" class="">
+        <section class="first">
+            <section class="second">
+                <section class="third_numbers">
+
+                    <article id="boton" class="cell"> <img class="icons" src="./asserts/sigma.png" alt=""> </article>
+                    <article id="add_list" class="cell"> <i class="fa-solid fa-square-plus"></i> </article>
+                    
+                </section>
+                <section class="third">
+
+                </section>
+            </section>
+            <ul id="anyadir_lista">
+
+            </ul>
+            
+        </section>
+    </main>
+    <script src="./sumatorio.js"></script>
+    <script>
+        let add_list = document.querySelector('#add_list');
+        
+    </script>
+    <script>
+        function anyadir(){
+            
+            let anyadir_lista = document.querySelector('#anyadir_lista');
+            let x = window.prompt('Valor de la nueva lista: ');
+
+            let y = document.createElement('li');
+            y.textContent = `${x}`;
+            anyadir_lista.appendChild(y);
+        }
+
+        document.querySelector('#add_list').addEventListener('click', (e)=>{
+            anyadir()
+        });
+
+    </script>
+</body>
+</html>
